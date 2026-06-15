@@ -56,11 +56,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center transition-colors"
-              aria-label="LinkedIn"
+ 
             >
               <svg
                 className="w-5 h-5"
