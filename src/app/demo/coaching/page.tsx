@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import ChatInterface from "@/components/ChatInterface";
+import DemoHeader from "@/components/DemoHeader";
+
+export const metadata: Metadata = {
+  title: "AI Chatbot for Coaching Institutes",
+  description:
+    "See a live AI chatbot demo built for coaching institutes. Answers course, admission and fee questions and captures student leads 24/7.",
+};
 
 const systemPrompt = `You are a helpful AI assistant for "BrightMind Academy" — a coaching institute for competitive exams and school courses. You help visitors with:
 
@@ -24,12 +32,25 @@ const placeholders = [
 
 export default function CoachingDemo() {
   return (
-    <ChatInterface
-      title="BrightMind Academy Assistant"
-      subtitle="Guiding students to success"
-      gradient="from-purple-500 to-pink-400"
-      systemPrompt={systemPrompt}
-      placeholders={placeholders}
-    />
+    <>
+      <DemoHeader
+        industry="Coaching Institute"
+        headline="An Admissions Counsellor That Replies at 10 PM"
+        subtitle="A live demo of a chatbot trained for coaching institutes. Ask anything about courses, fees or admissions."
+        benefits={[
+          "Answers course, batch & fee questions 24/7",
+          "Captures parent enquiries with name, class & target exam",
+          "Filters out tyre-kickers so your counsellors focus on real leads",
+        ]}
+        gradient="from-purple-500 to-pink-400"
+      />
+      <ChatInterface
+        title="BrightMind Academy Assistant"
+        subtitle="Guiding students to success"
+        gradient="from-purple-500 to-pink-400"
+        systemPrompt={systemPrompt}
+        placeholders={placeholders}
+      />
+    </>
   );
 }

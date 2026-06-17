@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import ChatInterface from "@/components/ChatInterface";
+import DemoHeader from "@/components/DemoHeader";
+
+export const metadata: Metadata = {
+  title: "AI Chatbot for Restaurants & Cafes",
+  description:
+    "See a live AI chatbot demo built for restaurants and cafes. Answers menu questions, takes table reservations and shares delivery info automatically.",
+};
 
 const systemPrompt = `You are a friendly AI assistant for "Spice Garden Restaurant" — a popular North Indian & Chinese restaurant. You help customers with:
 
@@ -24,12 +32,25 @@ const placeholders = [
 
 export default function RestaurantDemo() {
   return (
-    <ChatInterface
-      title="Spice Garden Assistant"
-      subtitle="Your table is ready"
-      gradient="from-orange-500 to-red-400"
-      systemPrompt={systemPrompt}
-      placeholders={placeholders}
-    />
+    <>
+      <DemoHeader
+        industry="Restaurant & Cafe"
+        headline="A Host That Never Sleeps, Never Forgets the Menu"
+        subtitle="A live demo of a chatbot trained for restaurants and cafes. Try booking a table below."
+        benefits={[
+          "Answers menu, hours & delivery questions instantly",
+          "Books table reservations with name, party size & time",
+          "Captures late-night enquiries that your phone would miss",
+        ]}
+        gradient="from-orange-500 to-red-400"
+      />
+      <ChatInterface
+        title="Spice Garden Assistant"
+        subtitle="Your table is ready"
+        gradient="from-orange-500 to-red-400"
+        systemPrompt={systemPrompt}
+        placeholders={placeholders}
+      />
+    </>
   );
 }

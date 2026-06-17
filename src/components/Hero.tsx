@@ -2,6 +2,12 @@
 
 import { motion } from "framer-motion";
 
+const trustSignals = [
+  "Built for Indian local businesses",
+  "3-5 day setup",
+  "Works on any website",
+];
+
 export default function Hero() {
   return (
     <section
@@ -20,57 +26,65 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-300 text-sm mb-8">
             <span className="w-2 h-2 rounded-full bg-primary-400 animate-pulse" />
-            AI-Powered Business Solutions
+            AI Chatbots for Local Businesses in India
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight">
-            Custom AI Chatbots
-            <br />
+            Give Your Business a{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
-              for Businesses
+              24/7 AI Assistant
             </span>
+            <br />
+            — No Tech Skills Needed
           </h1>
 
           <p className="mt-6 text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Automate customer support, capture leads, and respond 24/7 with AI.
-            Built for gyms, coaching institutes, restaurants, and more.
+            Custom chatbots for gyms, coaching institutes, and restaurants
+            across India. Setup in 3 days. No coding, no monthly headaches.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#demos"
+              href="#contact"
               className="px-8 py-3.5 bg-primary-600 hover:bg-primary-500 rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-primary-500/25 w-full sm:w-auto"
             >
-              View Demos
+              Book Free Demo
             </a>
             <a
-              href="#contact"
+              href="#demos"
               className="px-8 py-3.5 border border-white/10 hover:border-white/20 rounded-lg font-medium transition-all hover:bg-white/5 w-full sm:w-auto"
             >
-              Contact Me
+              See Live Examples
             </a>
           </div>
         </motion.div>
 
-        {/* Stats */}
+        {/* Trust signals (replaces fake stats) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto"
+          className="mt-20 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 max-w-3xl mx-auto"
         >
-          {[
-            { value: "10+", label: "Chatbots Built" },
-            { value: "24/7", label: "Availability" },
-            { value: "95%", label: "Response Rate" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-2xl sm:text-3xl font-bold text-primary-400">
-                {stat.value}
-              </div>
-              <div className="text-xs sm:text-sm text-gray-500 mt-1">
-                {stat.label}
-              </div>
+          {trustSignals.map((signal) => (
+            <div
+              key={signal}
+              className="flex items-center gap-2 text-sm text-gray-400"
+            >
+              <svg
+                className="w-4 h-4 text-primary-400 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span>{signal}</span>
             </div>
           ))}
         </motion.div>

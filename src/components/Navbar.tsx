@@ -9,8 +9,10 @@ export default function Navbar() {
   const links = [
     { href: "#home", label: "Home" },
     { href: "#services", label: "Services" },
-    { href: "#demos", label: "Demos" },
+    { href: "#demos", label: "Industries" },
     { href: "#how-it-works", label: "How It Works" },
+    { href: "#pricing", label: "Pricing" },
+    { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -37,7 +39,7 @@ export default function Navbar() {
               href="#contact"
               className="px-4 py-2 bg-primary-600 hover:bg-primary-500 rounded-lg text-sm font-medium transition-colors"
             >
-              Get Free Demo
+              Book Demo
             </a>
           </div>
 
@@ -98,7 +100,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="block px-4 py-2 bg-primary-600 hover:bg-primary-500 rounded-lg text-sm font-medium text-center transition-colors"
               >
-                Get Free Demo
+                Book Demo
               </a>
             </div>
           </motion.div>

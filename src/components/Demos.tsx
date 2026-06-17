@@ -5,9 +5,10 @@ import Link from "next/link";
 
 const demos = [
   {
-    title: "Gym AI Assistant",
+    title: "Gyms & Fitness Centers",
     description:
       "Smart AI chatbot for fitness centers that handles member inquiries, schedules, and captures new leads automatically.",
+    painPoint: "Stop losing enquiries after 9 PM when your front desk goes home.",
     features: [
       "Membership information",
       "Gym timings",
@@ -26,9 +27,11 @@ const demos = [
     useCase: "Perfect for gyms, fitness studios & wellness centers",
   },
   {
-    title: "Coaching Institute Assistant",
+    title: "Coaching Institutes",
     description:
       "Educational AI assistant that guides prospective students through courses, admissions, and fee structures effortlessly.",
+    painPoint:
+      "Stop answering the same admission queries 50 times a day. Let the bot handle the first contact.",
     features: [
       "Course details",
       "Admission process",
@@ -48,9 +51,11 @@ const demos = [
     useCase: "Ideal for coaching centers, tutoring & online courses",
   },
   {
-    title: "Restaurant Assistant",
+    title: "Restaurants & Cafes",
     description:
       "Restaurant AI bot that assists customers with menus, reservations, timings, and delivery options around the clock.",
+    painPoint:
+      "Customers want answers at 11 PM, not tomorrow morning. Capture every reservation.",
     features: [
       "Menu assistance",
       "Table reservations",
@@ -86,17 +91,17 @@ export default function Demos() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-300 text-sm mb-6">
             <span className="w-2 h-2 rounded-full bg-primary-400 animate-pulse" />
-            Live Demos
+            Industries We Serve
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold">
-            Demo{" "}
+            Built for Your{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">
-              Chatbots
+              Industry
             </span>
           </h2>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto text-lg">
-            Try our AI chatbots live — built for real businesses, powered by
-            advanced AI
+            Live AI chatbots trained for real Indian businesses. Click any card
+            to try the demo yourself.
           </p>
         </motion.div>
 
@@ -129,8 +134,11 @@ export default function Demos() {
                     <h3 className="text-xl font-bold mb-2 group-hover:text-primary-300 transition-colors">
                       {demo.title}
                     </h3>
-                    <p className="text-sm text-gray-400 mb-5 leading-relaxed">
+                    <p className="text-sm text-gray-400 mb-3 leading-relaxed">
                       {demo.description}
+                    </p>
+                    <p className="text-sm text-primary-300/90 mb-5 italic leading-relaxed">
+                      {demo.painPoint}
                     </p>
 
                     {/* Features */}

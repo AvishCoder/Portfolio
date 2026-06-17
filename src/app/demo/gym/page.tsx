@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import ChatInterface from "@/components/ChatInterface";
+import DemoHeader from "@/components/DemoHeader";
+
+export const metadata: Metadata = {
+  title: "AI Chatbot for Gyms & Fitness Centers",
+  description:
+    "See a live AI chatbot demo built for gyms and fitness centers. Answers membership plans, timings, trainer info and captures leads automatically.",
+};
 
 const systemPrompt = `You are a friendly AI assistant for "FitZone Gym" — a modern fitness center. You help visitors with:
 
@@ -22,12 +30,25 @@ const placeholders = [
 
 export default function GymDemo() {
   return (
-    <ChatInterface
-      title="FitZone Gym Assistant"
-      subtitle="Your 24/7 fitness companion"
-      gradient="from-blue-500 to-cyan-400"
-      systemPrompt={systemPrompt}
-      placeholders={placeholders}
-    />
+    <>
+      <DemoHeader
+        industry="Gym & Fitness"
+        headline="An AI Assistant That Sells Memberships While You Sleep"
+        subtitle="A live demo of a chatbot trained for gyms and fitness centers. Ask anything below."
+        benefits={[
+          "Answers membership, timing & trainer questions 24/7",
+          "Captures leads with name, phone & preferred callback time",
+          "Hands off hot leads to your front desk in seconds",
+        ]}
+        gradient="from-blue-500 to-cyan-400"
+      />
+      <ChatInterface
+        title="FitZone Gym Assistant"
+        subtitle="Your 24/7 fitness companion"
+        gradient="from-blue-500 to-cyan-400"
+        systemPrompt={systemPrompt}
+        placeholders={placeholders}
+      />
+    </>
   );
 }
