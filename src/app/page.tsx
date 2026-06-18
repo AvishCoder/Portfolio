@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import Demos from "@/components/Demos";
 import Founder from "@/components/Founder";
 import HowItWorks from "@/components/HowItWorks";
+import WebsiteServices from "@/components/WebsiteServices";
 import Pricing from "@/components/Pricing";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
@@ -18,6 +19,7 @@ export default function Home() {
       <Demos />
       <Founder />
       <HowItWorks />
+      <WebsiteServices />
       <Pricing />
       <Faq />
       <Contact />
